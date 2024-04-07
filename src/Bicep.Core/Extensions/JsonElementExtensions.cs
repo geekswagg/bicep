@@ -79,6 +79,7 @@ namespace Bicep.Core.Extensions
             return element.Merge(valueElement);
         }
 
+        [RequiresUnreferencedCode()]
         public static JsonElement Patch(this JsonElement element, params PatchOperation[] operations)
         {
             var patch = new JsonPatch(operations);
